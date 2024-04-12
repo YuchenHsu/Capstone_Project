@@ -26,8 +26,8 @@ SECRET_KEY = 'fpfd*qb+!is4hf@l6c(0n*1v4syzidbwzfsm-^%c30x*&772wc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = ['vnonymous-env.eba-ai3bsdyf.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ['vnonymous-env.eba-ai3bsdyf.us-west-2.elasticbeanstalk.com']
 
 # Application definition
 
@@ -79,24 +79,24 @@ WSGI_APPLICATION = 'video_app.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 # Local SQLite3 database
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 # AWS RDS database
-DATABASES = {
-  'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'djangodatabase',
-    'USER': 'masteruser',
-    'PASSWORD': 'masteruser',
-    'HOST': 'django-database.c6pxc7oyiyq1.us-west-2.rds.amazonaws.com',
-    'PORT': '5432',
-  }
-}
+# DATABASES = {
+#   'default': {
+#     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#     'NAME': 'djangodatabase',
+#     'USER': 'masteruser',
+#     'PASSWORD': 'masteruser',
+#     'HOST': 'django-database.c6pxc7oyiyq1.us-west-2.rds.amazonaws.com',
+#     'PORT': '5432',
+#   }
+# }
 
 
 # Password validation
